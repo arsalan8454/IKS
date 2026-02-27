@@ -1,0 +1,125 @@
+.mindmap-section {
+  padding: 100px 8%;
+  background: #0c0f14;
+  color: white;
+  text-align: center;
+}
+
+
+.mindmap-header h2 {
+  font-size: 44px;
+  font-weight: 500;
+}
+
+.mindmap-header p {
+  opacity: 0.7;
+  max-width: 600px;
+  margin: 0 auto 80px;
+  line-height: 1.7;
+}
+
+
+.mindmap-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.core-node {
+  position: absolute;
+  padding: 28px 40px;
+  border-radius: 50px;
+  backdrop-filter: blur(20px);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.15);
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+
+.cluster {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+
+.left-cluster {
+  align-items: flex-end;
+  padding-right: 80px;
+}
+
+
+.right-cluster {
+  align-items: flex-start;
+  padding-left: 80px;
+}
+
+
+.node {
+  padding: 18px 26px;
+  border-radius: 14px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+}
+
+
+.node.warm {
+  background: rgba(255, 170, 90, 0.08);
+  border: 1px solid rgba(255, 170, 90, 0.3);
+}
+
+.node.warm:hover {
+  background: rgba(255, 170, 90, 0.18);
+}
+
+
+.node.cool {
+  background: rgba(0, 255, 255, 0.08);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+}
+
+.node.cool:hover {
+  background: rgba(0, 255, 255, 0.18);
+}
+
+
+.connector {
+  position: absolute;
+  width: 160px;
+  height: 1px;
+  top: 50%;
+}
+
+.left-line {
+  left: 35%;
+  background: linear-gradient(to right, transparent, rgba(255,170,90,0.5));
+}
+
+.right-line {
+  right: 35%;
+  background: linear-gradient(to left, transparent, rgba(0,255,255,0.5));
+}
+
+
+@media (max-width: 900px) {
+  .mindmap-wrapper {
+    flex-direction: column;
+  }
+
+  .cluster {
+    width: 100%;
+    align-items: center;
+    padding: 0;
+  }
+
+  .core-node,
+  .connector {
+    display: none;
+  }
+}

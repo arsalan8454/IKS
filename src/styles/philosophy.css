@@ -1,0 +1,100 @@
+.ph-section {
+  padding: 40px 8%;
+  background: #0b0f18;
+  color: white;
+}
+
+/* HEADER */
+
+.ph-header {
+  text-align: center;
+  margin-bottom: 120px;
+}
+
+.ph-header h2 {
+  font-size: 48px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.ph-header p {
+  max-width: 650px;
+  margin: auto;
+  opacity: 0.7;
+  line-height: 1.8;
+}
+
+/* GRID */
+
+.ph-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+}
+
+/* CARD */
+
+.ph-card {
+  padding: 50px;
+  border-radius: 20px;
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: 0.4s ease;
+}
+
+/* ANCIENT THEME */
+
+.ph-card.ancient {
+  background: linear-gradient(135deg, rgba(120,60,20,0.2), rgba(40,20,10,0.6));
+  border-color: rgba(200,155,94,0.25);
+}
+
+.ph-card.ancient:hover {
+  box-shadow: 0 0 40px rgba(200,155,94,0.2);
+}
+
+/* MODERN THEME */
+
+.ph-card.modern {
+  background: linear-gradient(135deg, rgba(0,60,90,0.2), rgba(5,15,25,0.7));
+  border-color: rgba(77,216,255,0.25);
+}
+
+.ph-card.modern:hover {
+  box-shadow: 0 0 40px rgba(77,216,255,0.2);
+}
+
+/* TAG */
+
+.ph-tag {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.7;
+  display: block;
+  margin-bottom: 18px;
+}
+
+/* TITLE */
+
+.ph-card h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* TEXT */
+
+.ph-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  opacity: 0.85;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+  .ph-grid {
+    grid-template-columns: 1fr;
+  }
+}
